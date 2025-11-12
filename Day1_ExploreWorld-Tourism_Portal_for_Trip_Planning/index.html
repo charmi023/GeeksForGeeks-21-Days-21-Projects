@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExploreWorld - Tourism Portal for Trip Planning</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome & Google Fonts -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header role="banner">
+      <div class="container">
+        <nav role="navigation" aria-label="main navigation">
+          <!-- site title is a link for keyboard users -->
+          <h1><a href="#destinations" aria-label="ExploreWorld home">ExploreWorld</a></h1>
+
+          <ul>
+            <li><a href="#destinations">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#destinations">Packages</a></li>
+            <li><a href="#destinations">Testimonials</a></li>
+            <li><a href="#destinations">Book Now</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" role="region" aria-label="home section">
+      <video class="bg-video" autoplay loop muted playsinline>
+        <source src="video/travel.mp4" type="video/mp4" />
+        <!-- fallback text for older browsers -->
+        Your browser does not support the video element. Try updating your browser or view the site on another device.
+      </video>
+      <div class="overlay"></div>
+      <div class="home-content container">
+        <h2>Discover Your Next Adventure</h2>
+        <p>
+          Explore breathtaking destinations around the world and create memories
+          that last a lifetime.
+        </p>
+        <a href="#destinations" class="btn" aria-label="Explore Packages">Explore Packages</a>
+      </div>
+    </section>
+
+    <!-- Destinations (kept as #destinations everywhere) -->
+    <section id="destinations" class="section" role="region" aria-label="destinations section">
+      <div class="container">
+        <h2>Popular Destinations</h2>
+        <div class="destinations-grid">
+          <article class="destinations-card">
+            <img
+              src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=800&q=80"
+              alt="Eiffel Tower in Paris"
+            />
+            <h3>Paris, France</h3>
+          </article>
+
+          <article class="destinations-card">
+            <img
+              src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
+              alt="Bali beach"
+            />
+            <h3>Bali, Indonesia</h3>
+          </article>
+
+          <article class="destinations-card">
+            <img
+              src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad?auto=format&fit=crop&w=800&q=80"
+              alt="New York skyline"
+            />
+            <h3>New York, USA</h3>
+          </article>
+
+          <article class="destinations-card">
+            <img
+              src="https://images.unsplash.com/photo-1601040323877-32c2bff3768e?auto=format&fit=crop&w=800&q=80"
+              alt="Amber Fort in Jaipur"
+            />
+            <h3>Jaipur, India</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="section" role="region" aria-label="testimonials section">
+      <div class="container">
+        <h2>What Our Travelers Say</h2>
+        <div class="testimonials-grid">
+          <blockquote class="testimonial">
+            <!-- use compatible FA classes -->
+            <i class="fas fa-quote-left fa-2x" aria-hidden="true"></i>
+            <p>“ExploreWorld made our honeymoon unforgettable! Everything was perfectly arranged.”</p>
+            <h4>- Charmi Lakhwani</h4>
+          </blockquote>
+          <blockquote class="testimonial">
+            <i class="fas fa-quote-left fa-2x" aria-hidden="true"></i>
+            <p>“Best travel agency ever! Smooth booking and amazing destinations.”</p>
+            <h4>- Vikas Thakur</h4>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" role="region" aria-label="booking section">
+      <div class="container">
+        <h2>Book Your Travel</h2>
+        <p>Ready for your next adventure? Fill out the form below to book your dream trip!</p>
+
+        <!-- added a placeholder action; adjust to your backend endpoint -->
+        <form aria-label="booking-form" method="post" action="#destinations">
+          <label for="fullname">Full Name</label>
+          <input
+            type="text"
+            name="full_name"
+            id="fullname"
+            required
+            placeholder="Enter your full name"
+          />
+
+          <label for="select-destination">Destination</label>
+          <!-- changed id to be unique and clear -->
+          <select name="destination" id="select-destination" required>
+            <option value="">Select Destination</option>
+            <option value="paris">Paris</option>
+            <option value="bali">Bali</option>
+            <option value="newyork">New York</option>
+          </select>
+
+          <label for="message">Message or Feedback</label>
+          <textarea
+            name="feedback"
+            id="message"
+            placeholder="Enter your special requirements"
+          ></textarea>
+
+          <button type="submit" class="btn">Book Now</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-about">
+          <h3>ExploreWorld</h3>
+          <p>Discover and plan unforgettable trips across the globe. Travel made simple, safe, and memorable.</p>
+        </div>
+
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#destinations">Home</a></li>
+            <li><a href="#destinations">Destinations</a></li>
+            <li><a href="#destinations">Packages</a></li>
+            <li><a href="#destinations">Book Now</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-social">
+          <h3>Follow Us</h3>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 ExploreWorld. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
